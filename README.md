@@ -1,8 +1,8 @@
 # Alien Typer Shit: Frontend
 
-##### User-facing web app. this code produces a simple react js web app with SSR in TS.
+#### User-facing web app. this code produces a simple react js web app with SSR in TS.
 
-#### Key ingredients
+### Key ingredients
 
 - **[TypeScript](https://www.typescriptlang.org/)** to ensure the highest code quality
 - **[Next.js](https://github.com/zeit/next.js)** to bundle source files and render web pages both on the server and the client (SSR)
