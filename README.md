@@ -1,8 +1,6 @@
-#Alien Typer Shit: Frontend
+# Alien Typer Shit: Frontend
 
-#####User-facing web app. this code produces a simple react js web app with SSR in TS.
-
-
+##### User-facing web app. this code produces a simple react js web app with SSR in TS.
 
 #### Key ingredients
 
@@ -33,7 +31,7 @@
     ## ≥ 1.10
     ```
 
-1.  Clone the repo 
+1.  Clone the repo
 
     ```bash
     cd PATH/TO/MISC/PROJECTS
@@ -49,8 +47,7 @@
 
 1.  Copy `.env.dist` to `.env`. You can have a look at [`src/config.ts`](src/config.ts) for hints on what is expected.
 
-
-1.  Start the server in development mode
+1)  Start the server in development mode
 
     ```bash
     yarn dev
@@ -59,10 +56,9 @@
     Modifying any of the files will refresh the app, thanks to Next.js hot module reloading.
     To stop running the server, press `ctrl+c`.
 
-1.  If you want to test a production copy of the microservice, build and run it like this:
+1)  If you want to test a production copy of the microservice, build and run it like this:
 
     ```bash
     yarn build
     yarn start
     ```
-
