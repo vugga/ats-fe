@@ -8,7 +8,7 @@ import { ApolloProvider } from "react-apollo";
 // import { Store } from "redux";
 import withData from "../lib/withData";
 
-class MyApp extends App<{ apolloClient: ApolloClient<{}>, reduxStore: Store }> {
+class MyApp extends App<{ apolloClient: ApolloClient<{}>; reduxStore: Store }> {
   public static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
@@ -20,12 +20,12 @@ class MyApp extends App<{ apolloClient: ApolloClient<{}>, reduxStore: Store }> {
   }
 
   public render() {
-    const { Component, pageProps, apolloClient, /**reduxStore */ } = this.props;
+    const { Component, pageProps, apolloClient /**reduxStore */ } = this.props;
     return (
       <Container>
         <ApolloProvider client={apolloClient}>
           {/* <Provider store={reduxStore}> */}
-            <Component {...pageProps} />
+          <Component {...pageProps} />
           {/* </Provider> */}
         </ApolloProvider>
       </Container>

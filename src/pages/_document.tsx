@@ -5,8 +5,6 @@ import { resolve } from "path";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
 
-// import removeCommentsAndSpacing from "../lib/removeCommentsAndSpacing";
-
 const nextDir = resolve(process.cwd(), ".next");
 const doGetContent = (file) => readFileSync(resolve(nextDir, file), "utf8");
 const getContent =
