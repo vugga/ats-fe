@@ -1,0 +1,9 @@
+.DS_Store
+.env
+yarn-error.log
+
+/.next
+/build
+/lang/.messages
+/node_modules
+/locales/**/*.missing.json

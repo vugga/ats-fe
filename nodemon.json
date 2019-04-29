@@ -1,0 +1,13 @@
+{
+  "watch": [
+    ".babelrc",
+    ".env",
+    "locales/**/*.json",
+    "src/next.config.js",
+    "src/*.ts"
+  ],
+  "ignore": ["locales/**/*.missing.json"],
+  "execMap": {
+    "ts": "ts-node --compiler-options '{\"module\":\"commonjs\"}'"
+  }
+}

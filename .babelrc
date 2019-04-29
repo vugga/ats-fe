@@ -1,0 +1,53 @@
+{
+  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "plugins": [
+    "graphql-tag",
+    "lodash",
+    [
+      "styled-components",
+      { "ssr": true, "displayName": true, "preprocess": false }
+    ],
+
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "router": "./src/router",
+        "components": "./src/components",
+        "containers": "./src/containers",
+        "constants": "./src/constants",
+        "data": "./src/data",
+        "appRedux": "./src/redux",
+        "store": "./src/store",
+        "util": "./src/util",
+        "views": "./src/views",
+      }
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "graphql-tag",
+        "lodash",
+        [
+          "styled-components",
+          { "ssr": true, "displayName": false, "preprocess": false }
+        ],
+
+        ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "router": "./src/router",
+            "components": "./src/components",
+            "containers": "./src/containers",
+            "constants": "./src/constants",
+            "data": "./src/data",
+            "appRedux": "./src/redux",
+            "store": "./src/store",
+            "util": "./src/util",
+            "views": "./src/views",
+          }
+        }]
+      ]
+    }
+  }
+}
