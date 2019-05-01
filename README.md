@@ -11,7 +11,6 @@
 - ~~**[Redux](https://github.com/reduxjs/redux)** for static react state~~
 - **[Apollo GraphQL client](https://github.com/apollographql/apollo-client)** to get data from the backend
 - **[Styled components](https://www.styled-components.com/)** to produce well-structured and collision-free CSS
-- **[Lodash](https://lodash.com/)** to leverage common utility functions
 - **[ESLint](https://eslint.org/)** and **[Prettier](https://prettier.io/)** to ensure that source files are error-free and easy to read
 - **[Docker](https://www.docker.com/)** to make the production version of the microservice straightforward to deploy
 - **[GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/)** to automatically check code quality and generate a new docker image on every push
