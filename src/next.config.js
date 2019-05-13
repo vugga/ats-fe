@@ -28,7 +28,7 @@ module.exports = withPlugins(
     //   }
     // },
     webpack: (config, { isServer }) => {
-      config.plugins.push(new LodashModuleReplacementPlugin({ paths: true }));
+      // config.plugins.push(new LodashModuleReplacementPlugin({ paths: true }));
       if (!isServer) {
         config.externals = {
           "./config": "{}",

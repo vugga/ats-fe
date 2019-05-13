@@ -11,7 +11,7 @@ const Home: NextFunctionComponent = () => {
         <Head>
           <title>Vuga ATS</title>
         </Head>
-        <div>Some dump component</div>
+        <div>Some component</div>
       </React.Fragment>
     </ThemeProvider>
   );

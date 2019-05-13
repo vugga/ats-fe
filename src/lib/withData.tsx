@@ -68,7 +68,7 @@ export default (App) => {
       };
     }
     private apolloClient;
-    private reduxStore;
+    // private reduxStore;
 
     public constructor(props) {
       super(props);
