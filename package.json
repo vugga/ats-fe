@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "analyze": "BUNDLE_ANALYZE=both yarn build",
-    "build": "next build src && rimraf build && tsc --project tsconfig.server.json && ln -s ../src/static build/static",
+    "build": "next build src && rimraf build && tsc --project tsconfig.server.json && cp -r src/static build/static",
     "export": "next export src",
     "dev": "nodemon src/server.ts",
     "fix": "yarn fix:eslint && yarn fix:prettier",
