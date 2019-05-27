@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { atsTheme } from "./../theme";
 import { AtsScreen } from "../screens/Ats/AtsScreen";
