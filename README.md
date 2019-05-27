@@ -1,11 +1,16 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18841e65-0949-45b9-a171-b7fb128cb0bd/deploy-status)](https://app.netlify.com/sites/ats-fe/deploys)
+
 # Alien Typer Shit: Frontend
 
 #### User-facing web app. this code produces a simple react js web app with SSR in TS.
+
+![ATS Frontend](https://i.imgur.com/CDZvTZX.png)
 
 ### Key ingredients
 
 - **[TypeScript](https://www.typescriptlang.org/)** to ensure the highest code quality
 - **[Next.js](https://github.com/zeit/next.js)** to bundle source files and render web pages both on the server and the client (SSR)
+- **[React-router-dom](https://www.npmjs.com/package/react-router-dom)** For routing
 
 - **[React Context](https://reactjs.org/docs/context.html)** for static react state
 - ~~**[Redux](https://github.com/reduxjs/redux)** for static react state~~
