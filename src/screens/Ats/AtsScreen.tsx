@@ -1,7 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import GitHubButton from "react-github-btn";
 import styled from "styled-components";
+import dynamic from "next/dynamic";
+
+const GitHubButton = dynamic(import("react-github-btn"), {
+  ssr: false,
+});
 // import './styles.scss'; // inject scss
 
 // styling with styled components
