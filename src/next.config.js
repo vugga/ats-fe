@@ -2,14 +2,16 @@
 
 // const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 // const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
-// const withCss = require("@zeit/next-css");
+const withCss = require("@zeit/next-css");
+const withSass = require("@zeit/next-sass");
 const withTypescript = require("@zeit/next-typescript");
 const withPlugins = require("next-compose-plugins");
 
 module.exports = withPlugins(
   [
     withTypescript,
-    // withCss,
+    withCss,
+    withSass,
     // [
     //   withBundleAnalyzer,
     //   {

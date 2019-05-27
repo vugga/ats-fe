@@ -115,11 +115,12 @@ export default class MyDocument extends Document<{
             />
           )} */}
         </InlineStylesHead>
-        <body>
+        <body className="container">
           <div className="next-main">
             <Main />
           </div>
           <NextScript />
+          {/* <script src="/static/js/modernizr.min.js"/> */}
         </body>
       </html>
     );

@@ -15,8 +15,6 @@ const app = next({
   dev: env.NODE_ENV !== "production",
 });
 
-const handle = app.getRequestHandler();
-
 const rootStaticFiles = [
   "/browserconfig.xml",
   "/favicon.ico",
@@ -54,7 +52,7 @@ const rootStaticFiles = [
     (req as any).graphqlUri = env.SERVER_URI + env.GRAPHQL_PATH;
     (req as any).nodeEnv = env.NODE_ENV;
     (req as any).serverUri = env.SERVER_URI;
-    return handle(req, res);
+    return app.render(req, res, "/app", query);
   });
 
   server.listen(env.PORT, (err) => {

@@ -1,0 +1,201 @@
+$red: #ff0000;
+$green: #00ff22;
+.glitch {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Ubuntu, sans-serif;
+  font-size: 6vmin;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: #000;
+  -webkit-text-stroke: 0.02em #fff;
+  text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  animation: glitch-shadow 8s infinite linear, glitch-flicker 7s infinite linear;
+}
+
+@keyframes glitch-flicker {
+  0% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  10% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+  10.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  10.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  10.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  11% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+  11.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  11.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  11.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  50% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+  50.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  51.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  51.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  70% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+  70.1% {
+    color: #000;
+    -webkit-text-stroke-color: transparent;
+  }
+  70.6% {
+    color: #000;
+    -webkit-text-stroke-color: transparent;
+  }
+  70.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  73% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+  73.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  73.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  73.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  100% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+}
+
+@keyframes glitch-shadow {
+  0% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  3% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  3.1% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  3.6% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  3.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  6% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  6.1% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  6.6% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  6.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  16% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  16.1% {
+    text-shadow: 0 0 0 $green, 0 0 0 $red;
+  }
+  16.6% {
+    text-shadow: 0 0 0 $green, 0 0 0 $red;
+  }
+  16.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  50% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  50.1% {
+    text-shadow: 0.066em 0 0 $green, 0 0 0 $red;
+  }
+  50.6% {
+    text-shadow: 0.066em 0 0 $green, 0 0 0 $red;
+  }
+  50.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  62% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  62.1% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  62.6% {
+    text-shadow: 0 0 0 $green, -0.066em 0 0 $red;
+  }
+  62.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  63% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+  63.1% {
+    text-shadow: 0 0 0 $green, 0 0 0 $red;
+  }
+  63.6% {
+    text-shadow: 0 0 0 $green, 0 0 0 $red;
+  }
+  63.7% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+
+  100% {
+    text-shadow: 0.066em 0 0 $green, -0.066em 0 0 $red;
+  }
+}

@@ -1,0 +1,180 @@
+.count-down {
+  width: 400px;
+  display: inline-flex;
+}
+.count-down.inverted {
+  color: white;
+}
+
+.count-down-block {
+  position: relative;
+  width: calc(16.666% - 8px);
+  height: 12vw;
+  perspective: 200px;
+  font-size: 8vw;
+  font-family: sans-serif;
+  border: 1px solid black;
+  border-radius: 4px 0 0 4px;
+  flex: 0 0 auto;
+  font-size: 70px;
+  height: 86px;
+}
+.inverted .count-down-block {
+  background-color: black;
+}
+.count-down-block:nth-of-type(even) {
+  margin-right: 24px;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+.count-down-block:nth-of-type(even):after,
+.count-down-block:nth-of-type(even):before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  right: -15px;
+  border-radius: 50%;
+  top: 30%;
+}
+.inverted .count-down-block:nth-of-type(even):after,
+.inverted .count-down-block:nth-of-type(even):before {
+  background-color: black;
+}
+.count-down-block:nth-of-type(even):after {
+  top: auto;
+  bottom: 30%;
+}
+.count-down-block:nth-of-type(even) .count-down-content {
+  border-radius: 0 4px 0 0;
+}
+.count-down-block:nth-of-type(even) .count-down-content.bottom {
+  border-radius: 0 0 4px 0;
+}
+.count-down-block:last-of-type {
+  margin-right: 0;
+}
+.count-down-block:last-of-type:after,
+.count-down-block:last-of-type:before {
+  display: none;
+}
+.count-down-block .container-text-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: white;
+}
+.count-down-block .container-text-outer.bottom {
+  top: 50%;
+}
+.count-down-block .container-text-outer.bottom:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid black;
+  z-index: 99;
+}
+.count-down-block .shadow-gradient {
+  opacity: 0.6;
+  background: black;
+  height: 100%;
+}
+.count-down-block.animating .shadow-gradient {
+  transition: opacity 0.25s ease-out;
+  transition-delay: 0.1s;
+  opacity: 100%;
+  opacity: 0;
+}
+.count-down-block .bottom .shadow-gradient {
+  opacity: 0;
+  background: black;
+  height: 100%;
+}
+.count-down-block.animating .bottom .shadow-gradient {
+  transition-delay: 0.2s;
+  opacity: 100%;
+  opacity: 0.6;
+}
+.count-down-block .container-text-outer .container-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+}
+.count-down-block .container-text-outer.bottom .container-text {
+  top: 0%;
+}
+.count-down-block .count-down-content {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(50% + 1px);
+  transform-origin: bottom;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4px 0 0 0;
+}
+.inverted .count-down-block .count-down-content {
+  background-color: black;
+}
+.count-down-block .count-down-content:before {
+  position: absolute;
+  transform-origin: bottom;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(white, black);
+  opacity: 0;
+}
+.count-down-block .count-down-content:not(.bottom) {
+  border-bottom: none;
+}
+.count-down-block .count-down-content.bottom {
+  transform-origin: top;
+  transform: rotateX(90deg);
+  top: 50%;
+  border-top: none;
+  border-radius: 0 0 0 4px;
+}
+.count-down-block .count-down-content.bottom:before {
+  background: linear-gradient(black, white);
+  opacity: 0.5;
+}
+.count-down-block .count-down-content span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.count-down-block .count-down-content.bottom span {
+  top: 0;
+}
+.count-down-block.animating .count-down-content {
+  transition: transform 0.25s linear;
+  transform: rotateX(-90deg);
+}
+.count-down-block.animating .count-down-content:before {
+  transition: opacity 0.25s ease;
+  opacity: 0.5;
+}
+.count-down-block.animating .count-down-content.bottom {
+  transition: transform 0.25s linear;
+  transition-delay: 0.25s;
+  transform: rotateX(0deg);
+}
+.count-down-block.animating .count-down-content.bottom:before {
+  transition: opacity 0.25s ease;
+  transition-delay: 0.25s;
+  opacity: 0;
+}
