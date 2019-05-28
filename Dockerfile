@@ -1,19 +1,16 @@
-FROM node:10.15.1-alpine
+FROM mhart/alpine-node:10 AS builder
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /srv
 
-COPY package.json yarn.lock /usr/src/app/
-RUN YARN_CACHE_FOLDER=/dev/shm/yarn_cache yarn --production
-ENV NODE_ICU_DATA=/usr/src/app/node_modules/full-icu
+COPY ./ ./
+# RUN apk add --no-cache make gcc g++ python
+RUN yarn
+RUN yarn build
 
-COPY .next /usr/src/app/.next
-COPY locales /usr/src/app/locales
-COPY build /usr/src/app/build
-COPY src/static /usr/src/app/build/static
-
+# use lighter image
+FROM mhart/alpine-node:base-10
+COPY --from=builder /srv .
+ENV NODE_ENV=production
 EXPOSE 3000
+CMD ["node", "build/server.js"]
 
-USER node
-
-CMD [ "yarn", "start" ]

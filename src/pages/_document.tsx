@@ -115,7 +115,7 @@ export default class MyDocument extends Document<{
             />
           )} */}
         </InlineStylesHead>
-        <body className="container">
+        <body>
           <div className="next-main">
             <Main />
           </div>

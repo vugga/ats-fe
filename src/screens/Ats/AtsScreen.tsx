@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
+import { SEO } from "./SEO";
 
 const GitHubButton = dynamic(import("react-github-btn"), {
   ssr: false,
@@ -17,9 +18,10 @@ const GitHubContainer = styled.div`
 
 export const AtsScreen = () => {
   return (
-    <div>
+    <div className="container">
       {/* Inject CSS files */}
       <Head>
+        <SEO />
         <link href="/static/css/app.css" rel="stylesheet" />
         <link href="/static/css/moving-stars.css" rel="stylesheet" />
         <link href="/static/css/shooting-stars.css" rel="stylesheet" />
